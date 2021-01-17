@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OPT tracking API calls</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="src/api-calls.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h2>Calls to Opt Tracking API</h2>
+<span>Output:</span>
+<div id="output" class="alert alert-secondary" style="width: 50%"></div>
+<div class="container">
+    <form id="opt-form">
+        <div class="form-group">
+            <label for="optAddress">Opt address</label>
+            <input type="text" class="form-control" name="optAddress" id="optAddress"><br>
+            <label for="urn">Urn</label>
+            <input type="text" class="form-control" name="urn" id="urn" value="3"><br>
+            <label for="optId">Opt id</label>
+            <input type="text" class="form-control" name="optId" id="optId" value="4"><br>
+            <label for="action">Opt id</label>
+            <input type="text" class="form-control" name="action" id="action" value="5"><br>
+            <label for="optText">Opt id</label>
+            <textarea name="optText" class="form-control" id="optText" >prueba</textarea><br>
+            <label for="timestamp">Timestamp</label>
+            <input type="text" class="form-control" name="timestamp" id="timestamp" readonly><br>
+            <label for="index">Index</label>
+            <input type="text" class="form-control" name="index" id="index" readonly><br>
+        </div>
+    </form>
+    <button onclick="addOptAction()">Store content</button>
+    <hr/>
+    <div>
+        <input type="text" class="form-control" name="requestOptAddress" id="requestOptAddress"
+               placeholder="opt address"> <br>
+        <button onclick="getOptAction()">Get opt action</button>  <button onclick="getTotalOptActions()">Total</button>
+    </div>
+</div>
+
+</body>
+</html>

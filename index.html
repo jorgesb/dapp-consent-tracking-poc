@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TEST Orbit DB + Ethereum Storage Application</title>
+    <script type="text/javascript" src="./src/web3.min.js"></script>
+    <script type="text/javascript" src="src/App_.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
+
+</head>
+
+<body>
+<br/>
+<h2>OrbitDB + Ethereum Storage Application</h2>
+
+<hr/>
+<br/>
+
+<ol>
+    <li><code>deployStorage()</code>: Deploy the storage contract to your Ethereum blockchain. The geth client will show
+        it received the deployment transaction, return a transaction hash to the console, and print out the contract
+        transaction address after successful deployment.
+    </li>
+    <br/>
+    <li><code>storeContent(data)</code>: Submit a transaction to the Ethereum contract for storage on our
+        blockchain.
+    </li>
+    <br/>
+    <li><code>fetchContent()</code>: Gets the last stored IPFS address in the Ethereum contract and queries IPFS for the
+        associated URL.
+    </li>
+</ol>
+
+<br/>
+<hr/>
+<br/>
+
+<p>Run the commands:</p>
+<ol>
+    <li><button onclick="deployStorage()">Deploy</button></li>
+    <li><button onclick="storeContent('123456789')">Store content</button></li>
+    <li><button onclick="fetchContent()">Fetch content</button></li>
+</ol>
+</body>
